@@ -21,7 +21,7 @@ const App = () => {
   }
 
   const handleAddNumber = (num) => {
-    setCurrentNumber(prev => `${prev === '0' ? '' : prev} ${num}`)
+    setCurrentNumber(prev => `${prev === '0' ? '' : prev}${num}`)
   }
 
   const handleSumNumbers = () => {
@@ -104,7 +104,7 @@ const App = () => {
       <Content>
         <Input value={currentNumber} />
         <Row>
-          <Buttom label="x" onClick={handleMultiplicationNumbers} />
+          <Buttom label="x" onClick={() => handleMultiplicationNumbers()} />
           <Buttom label="/" onClick={handleDivisionNumbers} />
           <Buttom label="c" onClick={handleOnClear} />
           <Buttom label="." />
